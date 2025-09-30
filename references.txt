@@ -1,0 +1,7 @@
+O Tutorial do Python: <https://docs.python.org/pt-br/3.13/tutorial/index.html>
+
+A Referência da Linguagem Python: <https://docs.python.org/pt-br/3.13/reference/index.html#reference-index>
+
+A Biblioteca Padrão do Python: <https://docs.python.org/pt-br/3.13/library/index.html#library-index>
+
+Glossário: <https://docs.python.org/pt-br/3.13/glossary.html#glossary>

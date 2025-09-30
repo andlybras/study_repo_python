@@ -1,0 +1,27 @@
+Praticando o uso do Python como calculadora:
+
+Calculadora de IMC: Crie um pequeno programa que calcula o Índice de Massa Corporal (IMC). Peça ao usuário para inserir o peso (em kg) e a altura (em metros), e então calcule e exiba o resultado. A fórmula do IMC é: peso / (altura * altura).
+
+Conversor de Temperatura: Faça um programa que converta uma temperatura de Celsius para Fahrenheit. A fórmula é: (Celsius * 9/5) + 32.
+
+Juros Compostos: Escreva um programa que calcule o montante final de um investimento com juros compostos. Peça ao usuário o valor inicial, a taxa de juros anual e o número de anos. A fórmula é: Montante = Valor Inicial * (1 + taxa/100) ** anos.
+
+Praticando a manipulação de strings:
+
+Inversor de Palavras: Crie um programa que peça ao usuário para digitar uma palavra e, em seguida, exiba a palavra invertida. Por exemplo, se o usuário digitar "Python", o programa deve exibir "nohtyP".
+
+Contador de Vogais: Escreva um programa que conte o número de vogais em uma frase fornecida pelo usuário.
+
+Gerador de Acrônimos: Crie um programa que gere um acrônimo a partir de uma frase. Por exemplo, para a frase "Organização das Nações Unidas", o programa deve exibir "ONU".
+
+Praticando o uso de listas:
+
+Lista de Compras: Crie um programa que permita ao usuário criar uma lista de compras. O programa deve permitir adicionar itens, remover itens e exibir a lista completa.
+
+Separador de Pares e Ímpares: Escreva um programa que peça ao usuário para inserir uma série de números e, em seguida, separe esses números em duas listas: uma com os números pares e outra com os ímpares.
+
+Jogo da Forca (simplificado): Crie uma versão simples do jogo da forca. O programa deve escolher uma palavra de uma lista predefinida e pedir ao usuário para adivinhar as letras. A cada acerto, a letra correta é revelada.
+
+Desafio final (combinando tudo):
+
+Calculadora com Histórico: Crie uma calculadora que, além de realizar as operações básicas, armazene o histórico de cálculos em uma lista. O usuário deve ser capaz de visualizar o histórico a qualquer momento.

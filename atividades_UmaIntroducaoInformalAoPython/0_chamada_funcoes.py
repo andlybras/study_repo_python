@@ -4,6 +4,7 @@ from juros_compostos import juros_compostos
 from inversor_palavras import inversor_de_palavras
 from contador_vogais import contator_vogais
 from gerador_acronimos import gerador_acronimos
+from lista_compras import lista_compras
 
 def atividades():
 
@@ -16,6 +17,8 @@ def atividades():
         print("4 - Inverter palavra")
         print("5 - Contar vogais")
         print("6 - Gerar acrônimo")
+        print("7 - Lista de Compras")
+        print("8 - Sair")
         escolha = input("\nDigite o número da atividade desejada: ")
 
         try:
@@ -31,6 +34,11 @@ def atividades():
                 contator_vogais()
             elif escolha == "6":
                 gerador_acronimos()
+            elif escolha == "7":
+                lista_compras()
+            elif escolha == "8":
+                print("\nPrograma Encerrado")
+                break
             else:
                 print("Opção inválida. Tente novamente.")
         except:

@@ -5,6 +5,7 @@ from inversor_palavras import inversor_de_palavras
 from contador_vogais import contator_vogais
 from gerador_acronimos import gerador_acronimos
 from lista_compras import lista_compras
+from pares_impares import pares_impares
 
 def atividades():
 
@@ -18,7 +19,8 @@ def atividades():
         print("5 - Contar vogais")
         print("6 - Gerar acrônimo")
         print("7 - Lista de Compras")
-        print("8 - Sair")
+        print("8 - Separar Números Pares e Impares")
+        print("0 - Sair")
         escolha = input("\nDigite o número da atividade desejada: ")
 
         try:
@@ -37,6 +39,8 @@ def atividades():
             elif escolha == "7":
                 lista_compras()
             elif escolha == "8":
+                pares_impares()
+            elif escolha == "0":
                 print("\nPrograma Encerrado")
                 break
             else:

@@ -24,5 +24,3 @@ def pares_impares():
 
         except ValueError:
             print("Entrada inválida. Tente novamente.")
-
-pares_impares()

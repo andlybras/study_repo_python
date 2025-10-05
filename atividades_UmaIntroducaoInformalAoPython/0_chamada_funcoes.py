@@ -6,6 +6,7 @@ from contador_vogais import contator_vogais
 from gerador_acronimos import gerador_acronimos
 from lista_compras import lista_compras
 from pares_impares import pares_impares
+from jogo_forca import jogo_forca
 
 def atividades():
 
@@ -20,6 +21,7 @@ def atividades():
         print("6 - Gerar acrônimo")
         print("7 - Lista de Compras")
         print("8 - Separar Números Pares e Impares")
+        print("9 - Brincar de Jogo da Forca")
         print("0 - Sair")
         escolha = input("\nDigite o número da atividade desejada: ")
 
@@ -40,6 +42,8 @@ def atividades():
                 lista_compras()
             elif escolha == "8":
                 pares_impares()
+            elif escolha == "9":
+                jogo_forca()
             elif escolha == "0":
                 print("\nPrograma Encerrado")
                 break

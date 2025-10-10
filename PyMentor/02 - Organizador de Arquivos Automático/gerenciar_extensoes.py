@@ -18,7 +18,6 @@ def mostrar_categorias(extensoes):
 def gerenciar_extensoes(extensoes):
     
     print("\n" + "~"*30 + " Gerenciar Extensões " + "~"*30)
-    print("")
 
     while True:
         mostrar_categorias(extensoes)

@@ -1,0 +1,3 @@
+import os
+import shutil
+from gerenciar_extensoes import gerenciar_extensoes

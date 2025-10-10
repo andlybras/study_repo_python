@@ -1,0 +1,44 @@
+Título do Projeto:
+
+    Organizador de Arquivos Automático
+
+Nível:
+    
+    Iniciante
+
+Objetivo:
+
+    Criar um script que monitora uma pasta (por exemplo, a sua pasta de "Downloads") e move automaticamente cada arquivo para uma subpasta específica, de acordo com a sua extensão (tipo de arquivo).
+
+Conceitos Chave de Python a serem aplicados:
+
+    Manipulação de arquivos e diretórios com os módulos os e shutil.
+    Laços for para iterar sobre uma lista de arquivos.
+    Estruturas condicionais (if, elif, else) para tomar decisões.
+    Manipulação de strings para extrair a extensão de um nome de arquivo.
+
+Requisitos/Funcionalidades:
+
+    O script deve verificar todos os arquivos em uma pasta de origem que você definirá (Ex: "C:/Usuarios/SeuUsuario/Downloads/Bagunca").
+    Ele precisa criar subpastas para as categorias (ex: "Imagens", "Documentos", "Videos", "Outros"), caso elas ainda não existam.
+    Para cada arquivo na origem, o script deve identificar a extensão (ex: .jpg, .pdf, .mp4).
+    Com base na extensão, ele deve mover o arquivo para a subpasta correta.
+    .jpg, .png, .gif devem ir para a pasta "Imagens".
+    .pdf, .docx, .txt devem ir para a pasta "Documentos".
+    .mp4, .mov, .avi devem ir para a pasta "Videos".
+    Qualquer arquivo com uma extensão não reconhecida deve ser movido para a pasta "Outros".
+    O script deve ignorar as subpastas que ele mesmo criou, para não tentar mover uma pasta.
+
+Desafio Extra (Opcional):
+
+    Log de Atividades:
+    
+        Crie um arquivo log.txt e registre cada ação que o script realiza. Por exemplo: INFO: Movido o arquivo 'foto_de_ferias.jpg' para a pasta 'Imagens'.
+
+    Mais Flexibilidade:
+
+        Em vez de deixar as extensões fixas no código, crie um dicionário no início do script onde você mapeia as categorias para uma lista de extensões. Isso facilitará a adição de novos tipos de arquivo no futuro.
+
+Dica para começar:
+    
+    Antes de escrever o código, crie manualmente uma pasta em seu computador chamada "PastaBaguncada" e jogue alguns arquivos de tipos diferentes lá dentro (uma imagem, um pdf, etc.). Será sua área de testes!

@@ -1,5 +1,6 @@
 import os
 import shutil
+from chamada_caminhos import chamada_caminhos
 
 extensoes_permitidas = ['.pdf']
 
@@ -12,7 +13,7 @@ def menu_guardiao_backups():
         opcao_menu = input("\nDigite a opção desejada: ")
 
         if opcao_menu.lower() == 'iniciar':
-            print()
+            chamada_caminhos()
         
         elif opcao_menu.lower() == 'sair':
             print("\nPrograma Encerrado. Até mais!\n")

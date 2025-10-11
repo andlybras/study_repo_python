@@ -3,7 +3,7 @@ import shutil
 
 extensoes_permitidas = ['.pdf']
 
-def guardiao_backups():
+def menu_guardiao_backups():
 
     while True:
         print("\n" + "~"*30 + " Guardião de Backups  " + "~"*30)
@@ -21,4 +21,4 @@ def guardiao_backups():
         else:
             print("\nOpção inválida. Tente novamente.")
 
-guardiao_backups()
+menu_guardiao_backups()

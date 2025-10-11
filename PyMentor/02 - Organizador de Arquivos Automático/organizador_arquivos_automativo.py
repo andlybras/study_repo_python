@@ -3,7 +3,8 @@ import shutil
 from gerenciar_extensoes import extensoes, gerenciar_extensoes
 
 def organizar_arquivos(extensoes):
-    caminho_pasta = input("\nDigite o caminho da pasta que deseja organizar: ")
+    caminho_bruto = input("\nDigite o caminho da pasta que deseja organizar: ")
+    caminho_pasta = caminho_bruto.strip().strip('"> ')
     print("\nIniciando organização de arquivos...")
 
     itens_pasta = os.listdir(caminho_pasta)

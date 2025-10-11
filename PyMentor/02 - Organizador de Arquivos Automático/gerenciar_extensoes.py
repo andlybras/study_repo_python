@@ -53,9 +53,6 @@ def gerenciar_extensoes(extensoes):
                             extensoes[visualizar_extensoes].remove(extensao_remover)
                             print(f"\nExtensão removida com sucesso!\n{extensoes[visualizar_extensoes]}")
 
-                        elif extensao_remover not in extensoes[visualizar_extensoes]:
-                            print(f"\nExtensão '{extensao_remover}' não encontrada. Tente novamente.")
-
                         else:
                             print(f"\nExtensão '{extensao_remover}' não encontrada. Tente novamente.")
 
@@ -71,3 +68,6 @@ def gerenciar_extensoes(extensoes):
 
             else:
                 print("\nGrupo não encontrado. Tente novamente.")
+
+if __name__ == "__main__":
+    gerenciar_extensoes(extensoes)

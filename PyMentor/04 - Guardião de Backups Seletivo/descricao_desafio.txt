@@ -1,0 +1,31 @@
+Título do Projeto:
+
+    Guardião de Backups Seletivo
+
+Nível:
+
+    Intermediário
+
+Objetivo:
+
+    Expandir o uso dos módulos os e shutil para criar uma ferramenta de backup mais inteligente, que copia apenas tipos de arquivo específicos para uma pasta de backup com a data atual.
+
+Conceitos Chave a serem aplicados:
+
+    Módulos os e shutil para manipulação de arquivos e diretórios.
+    Uso da biblioteca datetime para obter a data atual e nomear pastas.
+    Iteração sobre arquivos e manipulação de strings para verificar extensões.
+    Estruturas de dados (listas ou tuplas) para definir quais tipos de arquivo devem ser salvos.
+
+Requisitos/Funcionalidades:
+
+    O script deve pedir ao usuário o caminho da pasta de origem (de onde os arquivos virão) e da pasta de destino (onde o backup será salvo).
+    Dentro da pasta de destino, o script deve criar uma nova subpasta com o nome no formato Backup-AAAA-MM-DD (ex: Backup-2025-10-10).
+    O programa deve ter uma lista pré-definida de extensões para fazer backup (ex: ['.txt', '.docx', '.jpg']).
+    Ele deve percorrer apenas os arquivos na raiz da pasta de origem (ignorando subpastas).
+    Para cada arquivo, se a extensão dele estiver na lista de backup, o arquivo deve ser copiado para a pasta de backup datada.
+
+Desafio Extra (Opcional):
+
+    Em vez de copiar, mova os arquivos. Mas antes, pergunte ao usuário se ele deseja copiar ou mover.
+    Crie um arquivo log.txt dentro da pasta de backup, registrando cada arquivo que foi salvo e o horário exato da operação.

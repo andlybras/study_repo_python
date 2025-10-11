@@ -1,0 +1,32 @@
+Título do Projeto:
+
+    Mural Aleatório: Sorteador de Papel de Parede
+
+Nível:
+
+    Avançado
+
+Objetivo:
+
+    Combinar os, random e a interação com o sistema para criar um script que busca imagens em uma pasta e todas as suas subpastas, e define uma delas aleatoriamente como o seu papel de parede.
+
+Conceitos Chave a serem aplicados:
+
+    Navegação recursiva de diretórios com os.walk().
+    Manipulação avançada de listas para armazenar os caminhos dos arquivos encontrados.
+    Uso de random.choice para selecionar um arquivo aleatório da lista.
+    Pesquisa e uso de bibliotecas específicas do sistema operacional (como ctypes no Windows) para executar a ação de mudar o papel de parede.
+
+Requisitos/Funcionalidades:
+
+    O script deve pedir ao usuário o caminho de uma pasta principal que contém as imagens.
+    Ele deve "caminhar" por essa pasta e TODAS as suas subpastas, procurando por arquivos com extensões de imagem (ex: .jpg, .jpeg, .png, .bmp).
+    Todos os caminhos completos dos arquivos de imagem encontrados devem ser armazenados em uma lista.
+    Se nenhuma imagem for encontrada, o programa deve informar o usuário e encerrar.
+    O script deve escolher aleatoriamente um caminho de imagem da lista.
+    Finalmente, ele deve executar o comando do sistema para definir essa imagem como o papel de parede do desktop.
+
+Desafio Extra (Opcional):
+
+    Crie um arquivo de "histórico" (wallpaper_history.txt) que guarda o caminho dos últimos 5 papéis de parede definidos para evitar repetições muito frequentes.
+    Permita que o usuário passe o caminho da pasta como um argumento de linha de comando (pesquisar sobre a biblioteca argparse) em vez de pedi-lo via input().

@@ -1,0 +1,31 @@
+Título do Projeto:
+
+    Jokenpô: A Batalha Clássica
+
+Nível:
+
+    Iniciante
+
+Objetivo:
+
+    Aprofundar o uso da biblioteca random e a lógica condicional, criando um jogo de "Pedra, Papel e Tesoura" para ser jogado contra o computador.
+
+Conceitos Chave a serem aplicados:
+
+    Biblioteca random (especificamente random.choice).
+    Laços while para permitir que o jogo continue.
+    Estruturas condicionais (if/elif/else) para determinar o vencedor.
+    Entrada do usuário (input()) e manipulação de strings (.lower()).
+
+Requisitos/Funcionalidades:
+
+    O programa deve definir uma lista de opções válidas: ['pedra', 'papel', 'tesoura'].
+    A cada rodada, o programa deve pedir ao jogador para escolher uma das opções.
+    O computador deve escolher uma opção aleatoriamente da lista.
+    O programa deve comparar as duas escolhas e declarar o resultado: "Você Venceu!", "Você Perdeu!" ou "Empate!".
+    Após cada rodada, pergunte se o jogador quer jogar novamente.
+
+Desafio Extra (Opcional):
+
+    Mantenha um placar de vitórias do jogador vs. vitórias do computador e exiba-o no final de cada rodada.
+    Valide a entrada do usuário. Se ele digitar algo que não seja "pedra", "papel" ou "tesoura", mostre uma mensagem de erro e peça para ele tentar novamente.

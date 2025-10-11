@@ -15,24 +15,31 @@ def organizar_arquivos(extensoes):
         if caminho_grupo_extensoes not in itens_pasta:
             os.mkdir(caminho_grupo_extensoes)
 
-    for item in itens_pasta:
-        caminho_completo_do_item = os.path.join(caminho_pasta, item)
-        if os.path.isdir(caminho_completo_do_item):
-            continue
+    caminho_do_log = os.path.join(caminho_pasta, "log_organizacao.txt")
+    with open(caminho_do_log, "a") as log:
 
-        nome_item, extensao_item = os.path.splitext(item)
+        for item in itens_pasta:
+            caminho_completo_do_item = os.path.join(caminho_pasta, item)
+            if os.path.isdir(caminho_completo_do_item):
+                continue
 
-        for grupo_extensoes, extensoes_validas in extensoes.items():
-            if extensao_item in extensoes_validas:
-                caminho_destino = os.path.join(caminho_pasta, grupo_extensoes)
+            nome_item, extensao_item = os.path.splitext(item)
+
+            for grupo_extensoes, extensoes_validas in extensoes.items():
+                if extensao_item in extensoes_validas:
+                    caminho_destino = os.path.join(caminho_pasta, grupo_extensoes)
+                    shutil.move(caminho_completo_do_item, caminho_destino)
+                    mensagem = (f"INFO: Arquivo '{item}' movido para a pasta {grupo_extensoes}.\n")
+                    log.write(mensagem)
+                    break
+
+            else:
+                caminho_destino = os.path.join(caminho_pasta, "Outros")
                 shutil.move(caminho_completo_do_item, caminho_destino)
-                break
+                mensagem = (f"INFO: Arquivo '{item}' movido para a pasta 'Outros'.\n")
+                log.write(mensagem)
 
-        else:
-            caminho_destino = os.path.join(caminho_pasta, "Outros")
-            shutil.move(caminho_completo_do_item, caminho_destino)
-
-    print("\nOrganização concluída!")
+        print("\nOrganização concluída!")
 
 def menu(gerenciar_extensoes, organizar_arquivos):
     print("\n" + "~"*30 + " Organizador de Arquivos Automático" + "~"*30)

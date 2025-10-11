@@ -1,6 +1,5 @@
-import os
-import shutil
 from chamada_caminhos import chamada_caminhos
+from execucao_backup import execucao_backup
 
 extensoes_permitidas = ['.pdf']
 
@@ -13,7 +12,10 @@ def menu_guardiao_backups():
         opcao_menu = input("\nDigite a opção desejada: ")
 
         if opcao_menu.lower() == 'iniciar':
-            chamada_caminhos()
+            origem, destino = chamada_caminhos()
+            execucao_backup(origem, destino, extensoes_permitidas)
+            print("\nBackup concluído com sucesso!\n")
+            return
         
         elif opcao_menu.lower() == 'sair':
             print("\nPrograma Encerrado. Até mais!\n")

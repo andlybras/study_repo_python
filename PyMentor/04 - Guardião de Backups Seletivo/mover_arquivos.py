@@ -1,14 +1,31 @@
-def mover_arquivos():
-    print("Função de mover arquivos.")
+import os
+import shutil
+import datetime
 
-    # Abra o arquivo log.txt em modo de escrita
+def mover_arquivos(origem, destino, extensoes_permitidas):
+    print("\nMovendo arquivos...")
 
-    # Vai criar dentro da pasta de origem, a pasta de backup datata
-        # adcione a informação no log
+    caminho_do_log = os.path.join(origem, "log_backup.txt")
+    with open(caminho_do_log, "a", encoding="utf-8") as log:
 
-    # uma lista com os caminhos dentro da pasta de origem deve ser gerada, aceitando somente arquivos
+        itens_origem = os.listdir(origem)
 
-    # para cada caminho da lista, separar o nome da extensão e armazenar em variáveis
+        for item in itens_origem:
+            caminho_completo_item = os.path.join(origem, item)
 
-        # se a extensão estiver na lista de extensões permitidas, mova o arquivo para a pasta do backup datata
-            # adcione a informação no log
+            if os.path.isdir(caminho_completo_item):
+                continue
+
+            nome_item, extensao_item = os.path.splitext(item)
+
+            if extensao_item in extensoes_permitidas:
+                data_atual = datetime.datetime.now().strftime("%Y%m%d")
+                pasta_backup = f"backup_{data_atual}"
+                caminho_pasta_backup = os.path.join(destino, pasta_backup)
+
+                if not os.path.exists(caminho_pasta_backup):
+                    os.mkdir(caminho_pasta_backup)
+                    log.write(f"INFO: Pasta de backup '{pasta_backup}' criada.\n")
+
+                shutil.move(caminho_completo_item, caminho_pasta_backup)
+                log.write(f"INFO: Arquivo '{item}' movido para a pasta '{pasta_backup}'.\n")

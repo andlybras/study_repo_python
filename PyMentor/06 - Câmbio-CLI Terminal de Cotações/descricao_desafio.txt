@@ -1,0 +1,45 @@
+Título do Projeto:
+
+    Câmbio-CLI Terminal de Cotações
+
+Nível:
+
+    Evolutivo (Iniciante ao Avançado)
+
+Objetivo:
+
+    Construir uma ferramenta de linha de comando (CLI) que busca cotações de moedas em tempo real e realiza conversões, evoluindo de valores fixos para uma ferramenta conectada à internet e mais robusta.
+
+Conceitos Chave de Python a serem aplicados:
+
+    Fase 1 (Iniciante): Funções, entrada e saída de dados (input/print), variáveis, tipos de dados (float, string), estruturas condicionais (if/elif/else).
+    Fase 2 (Intermediário): Consumo de APIs (biblioteca requests), manipulação de dados em formato JSON (módulo json), dicionários, e tratamento de erros (try/except).
+    Fase 3 (Avançado): Programação Orientada a Objetos (Classes), manipulação de arquivos (para salvar históricos), e talvez um pouco de compreensão de listas (list comprehensions).
+
+Requisitos/Funcionalidades (em Fases):
+
+    Fase 1: A Base (Nível Iniciante)
+
+        [ ] O programa deve pedir ao usuário 3 informações: a moeda de origem (ex: "USD"), a moeda de destino (ex: "BRL") e a quantia a ser convertida.
+        [ ] Para começar, use taxas de conversão fixas, definidas dentro do seu próprio código. Por exemplo, taxa_usd_brl = 5.25.
+        [ ] O programa deve calcular o valor convertido e exibi-lo de forma clara para o usuário, como: "100.00USDequivalemaR525.00 BRL".
+        [ ] Organize a lógica principal de cálculo dentro de uma função.
+
+    Fase 2: Conectando com o Mundo (Nível Intermediário)
+        
+        [ ] Substitua as taxas de conversão fixas por dados em tempo real. Para isso, você precisará:
+            Escolher e se cadastrar em uma API gratuita de cotação de moedas (uma busca por "free currency exchange rate api" te dará ótimas opções).
+            Usar a biblioteca requests para fazer uma chamada a essa API.
+            Interpretar a resposta, que virá em formato JSON, para extrair a taxa de conversão que você precisa.
+        [ ] Implemente um tratamento de erros básico. O que acontece se o usuário digitar o código de uma moeda que não existe? E se o computador estiver sem internet? O programa deve informar o erro de forma amigável, sem quebrar.
+
+    Fase 3: Tornando a Ferramenta Profissional (Nível Avançado)
+
+        [ ] Refatore seu código usando Programação Orientada a Objetos. Crie uma classe, por exemplo Conversor, que encapsule a lógica de buscar dados e realizar a conversão.
+        [ ] Crie um sistema de histórico. Cada conversão realizada com sucesso deve ser salva em um arquivo de log (ex: historico_conversoes.txt), registrando a data, a hora e os detalhes da operação.
+        [ ] Permita que o programa continue executando, pedindo por novas conversões, até que o usuário digite um comando para "sair".
+
+Desafio Extra (Opcional):
+
+    Implemente um sistema de cache simples. Para evitar chamar a API a cada segundo, guarde o resultado da cotação e só faça uma nova chamada se a última tiver sido feita há mais de 5 minutos.
+    Permita a conversão para múltiplas moedas de uma só vez (ex: converter 100 USD para BRL, EUR e JPY ao mesmo tempo).

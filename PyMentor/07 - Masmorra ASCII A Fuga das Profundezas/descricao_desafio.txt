@@ -1,0 +1,63 @@
+Título do Projeto:
+
+    Masmorra ASCII: A Fuga das Profundezas
+
+Nível:
+
+    Avançado
+
+Objetivo:
+
+    Construir um jogo clássico do gênero Roguelike que roda inteiramente no terminal.
+    O jogador deve navegar por uma masmorra gerada aleatoriamente, combater monstros e encontrar a saída para o próximo nível, tudo em um sistema baseado em turnos.
+
+Conceitos Chave de Python a serem aplicados:
+
+    Programação Orientada a Objetos (POO) em profundidade: Essencial para modelar o jogador, monstros, itens, e até mesmo o mapa.
+    Estruturas de Dados Complexas: Uso de listas de listas (ou dicionários) para representar o mapa do jogo.
+    Geração Procedural de Conteúdo (PCG): Criar algoritmos para gerar os layouts da masmorra de forma aleatória a cada nova partida.
+    Gerenciamento de Estado do Jogo: Controlar o fluxo do jogo através de um loop principal que gerencia os turnos do jogador e dos inimigos.
+    Algoritmos e Lógica de Jogo: Implementar mecânicas de combate, movimento e interação com o ambiente.
+
+Requisitos/Funcionalidades:
+
+    Geração do Mapa:
+    
+        O programa deve gerar um mapa 2D (uma grade) com salas de tamanhos aleatórios conectadas por corredores. As paredes devem ser representadas por um caractere (ex: #) e o chão por outro (ex: .).
+    
+    Entidade Jogador:
+    
+        Deve haver um objeto Jogador, representado por um @, que começa em uma posição aleatória em uma das salas.
+        O jogador deve poder se mover nas quatro direções (cima, baixo, esquerda, direita) usando as teclas (ex: W, A, S, D).
+        O jogador não pode atravessar paredes.
+    
+    Objetivo:
+    
+        Uma "escada" de saída, representada por um > ou E, deve ser colocada em uma sala aleatória (diferente da do jogador). O objetivo do nível é chegar até ela.
+    
+    Inimigos:
+    
+        O mapa deve ser populado com alguns monstros (ex: o para orcs, g para goblins).
+        Inicialmente, eles podem ficar parados. Cada monstro deve ser um objeto com seus próprios atributos (ex: pontos de vida, força de ataque).
+    
+    Sistema de Turnos e Combate:
+    
+        O jogo é baseado em turnos. A cada tecla que o jogador pressiona para se mover, um turno passa.
+        Se o jogador tentar se mover para uma casa ocupada por um monstro, um ataque acontece.
+        O jogador ataca o monstro, causando dano.
+        Depois do ataque do jogador, todos os monstros no mapa têm seu turno (inicialmente não farão nada, depois poderão atacar de volta).
+
+    Interface e Feedback:
+    
+        O terminal deve ser "limpo" e o mapa redesenhado a cada turno.
+        Informações importantes como os Pontos de Vida (HP) do jogador e mensagens de log ("Você ataca o orc!", "O orc morre.") devem ser exibidas na tela.
+
+    Condições de Fim de Jogo:
+    
+        O jogador vence o nível ao chegar na escada.
+        O jogador perde (Game Over) se seus pontos de vida chegarem a 0.
+
+Desafio Extra (Opcional):
+
+    Inteligência Artificial (IA) Simples: Dê vida aos monstros! Em seus turnos, se o jogador estiver a uma certa distância, o monstro deve se mover um passo em direção ao jogador.
+    Névoa de Guerra (Field of View - FOV): O jogador só pode ver uma área limitada ao seu redor. O resto do mapa fica escondido ou escurecido, sendo revelado conforme ele explora. Isso torna a exploração muito mais emocionante.

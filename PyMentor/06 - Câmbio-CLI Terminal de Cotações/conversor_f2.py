@@ -37,15 +37,33 @@ def conversor_f2(moedas):
             except ValueError:
                 print("Valor inválido. Tente novamente.")
                 continue
-        
-        url = f"https://v6.exchangerate-api.com/v6/7ebe4375447280ba2157a10c/latest/{escolha_moeda_converter}"
-        resposta = requests.get(url)
-        dados = resposta.json()
-        taxa_cambio = dados['conversion_rates'][escolha_moeda_referencia]
-        valor_convertido = valor_converter * taxa_cambio
-        print(f"\n{valor_converter:.2f} {escolha_moeda_converter} equivalem a {valor_convertido:.2f} {escolha_moeda_referencia}.\n")
-        break
 
+        try:
+            url = f"https://v6.exchangerate-api.com/v6/7ebe4375447280ba2157a10c/latest/{escolha_moeda_converter}"
+            resposta = requests.get(url)
+            resposta.raise_for_status()
+            dados = resposta.json()
+            taxa_cambio = dados['conversion_rates'][escolha_moeda_referencia]
+            valor_convertido = valor_converter * taxa_cambio
+
+            print(f"\n{valor_converter:.2f} {escolha_moeda_converter} equivalem a {valor_convertido:.2f} {escolha_moeda_referencia}.\n")
+            break
+
+        except requests.exceptions.ConnectionError:
+            print("Falha na conexão. Você está conectado à internet?")
+            break
+
+        except requests.exceptions.HTTPError as e:
+            print(f"Erro na resposta do servidor: {e}")
+            break
+
+        except KeyError:
+            print("Moeda não encontrada nos dados retornados pela API.")
+            break
+
+        except Exception as e:
+            print(f"Um erro inesperado ocorreu: {e}")
+            break
 def menu_conversor_f2(moedas):
 
     while True:

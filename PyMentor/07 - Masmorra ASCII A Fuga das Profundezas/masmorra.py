@@ -1,35 +1,44 @@
+import random
+
+MAPA_LARGURA = 100
+MAPA_ALTURA = 100
+
 def gerar_mapa_base():
-
     mapa = []
-    mapa_altura = 100   
-    mapa_largura = 75
 
-    for _ in range(mapa_altura):
+    for _ in range(MAPA_ALTURA):
         linha = []
-        for _ in range(mapa_largura):
+        for _ in range(MAPA_LARGURA):
             linha.append("#")
         mapa.append(linha)
     return mapa
 
 class Sala:
 
-    def __init__(self, y, x, largura, altura):
-        self.y = y
+    def __init__(self, x, y, largura, altura):
         self.x = x
+        self.y = y
         self.largura = largura
         self.altura = altura
+
+def gerar_sala_aleatoria():
+    sala_largura = random.randint(5, 15)
+    sala_altura = random.randint(5, 15)
+
+    sala_x = random.randint(1, MAPA_LARGURA - sala_largura - 1)
+    sala_y = random.randint(1, MAPA_ALTURA - sala_altura - 1)
+
+    return Sala(sala_x, sala_y, sala_largura, sala_altura)
 
 def esculpir_sala_no_mapa(mapa, sala):
     for y in range(sala.y, sala.y + sala.altura):
         for x in range(sala.x, sala.x + sala.largura):
             mapa[y][x] = "."
-    
     return mapa
 
 mapa_base = gerar_mapa_base()
-minha_sala = Sala(x=5, y=5, largura=20, altura=10)
-
-esculpir_sala_no_mapa(mapa_base, minha_sala)
+sala_aleatoria = gerar_sala_aleatoria()
+esculpir_sala_no_mapa(mapa_base, sala_aleatoria)
 
 print("\n--- Mapa da Masmorra ---")
 for linha in mapa_base:

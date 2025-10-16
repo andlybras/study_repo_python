@@ -22,8 +22,8 @@ class Sala:
         self.altura = altura
 
 def gerar_sala_aleatoria():
-    sala_largura = random.randint(5, 15)
-    sala_altura = random.randint(5, 15)
+    sala_largura = random.randint(5, 25)
+    sala_altura = random.randint(5, 25)
 
     sala_x = random.randint(1, MAPA_LARGURA - sala_largura - 1)
     sala_y = random.randint(1, MAPA_ALTURA - sala_altura - 1)

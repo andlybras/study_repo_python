@@ -176,34 +176,34 @@ def listar_moedas():
 
         if escolha == '1':
             for codigo, info in moedas.items():
-                print(f"{codigo}: {info['nome']} - {info['país']}")
+                print(f"\n{codigo}: {info['nome']} - {info['país']}")
             continue
 
         elif escolha == '2':
-            pais = input("Digite o nome do país: ")
+            pais = input("\nDigite o nome do país: ")
 
             for codigo, info in moedas.items():
                 if info['país'].lower() == pais.lower():
-                    print(f"{codigo}: {info['nome']} - {info['país']}")
+                    print(f"\n{codigo}: {info['nome']} - {info['país']}")
                     continue
             else:
-                print("País não encontrado.")
+                print("\nPaís não encontrado.")
                 continue
 
         elif escolha == '3':
-            codigo = input("Digite o código da moeda (ex: USD, EUR): ").upper()
+            codigo = input("\nDigite o código da moeda (ex: USD, EUR): ").upper()
 
             if codigo in moedas:
                 info = moedas[codigo]
-                print(f"{codigo}: {info['nome']} - {info['país']}")
+                print(f"\n{codigo}: {info['nome']} - {info['país']}")
                 continue
             else:
-                print("Código de moeda não encontrado.")
+                print("\nCódigo de moeda não encontrado.")
                 continue
 
         elif escolha == '4':
             break
 
         else:
-            print("Opção inválida. Tente novamente.")
+            print("\nOpção inválida. Tente novamente.")
             continue
